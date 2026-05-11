@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
+import { ArrowRightIcon } from "@/components/icons";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
+
+const FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSev6FRADYYJdTqHPqzr9mQHNY0zpTdih8cTobYsOlZ7ceinrg/viewform?usp=dialog";
 
 export function LPCTA() {
   return (
@@ -16,55 +20,35 @@ export function LPCTA() {
           <div className="absolute right-[-80px] top-[-80px] w-[280px] h-[280px] rounded-full bg-white/[0.06]" />
           <div className="absolute right-10 bottom-[-120px] w-[320px] h-[320px] rounded-full bg-white/[0.06]" />
           <div className="relative max-w-[640px]">
+            <div className="inline-flex items-center gap-2 rounded-full text-[11px] font-bold mb-5 bg-white/15 text-white px-3 py-[6px] tracking-[1.2px]">
+              MVP EM VALIDAÇÃO
+            </div>
             <h2 className="m-0 font-extrabold tracking-[-1.2px] leading-none text-white text-[clamp(32px,7vw,60px)]">
-              Sua próxima feira
+              Ainda não estamos
               <br />
-              vai ser a mais barata.
+              nas lojas.
             </h2>
             <p className="text-[17px] text-white/85 mt-[18px] leading-[1.5]">
-              Grátis. Sem cadastro de cartão. Em todas as redes parceiras.
+              O Menor Feira é um MVP em validação com usuários reais. Responda
+              um formulário rápido e ajude a moldar o app — você entra na lista
+              dos primeiros a testar quando lançarmos.
             </p>
             <div className="flex flex-wrap gap-3 mt-[30px]">
               <motion.a
-                href="#"
+                href={FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="no-underline bg-white text-ink! px-5 py-3 rounded-xl flex items-center gap-3"
+                className="no-underline bg-white text-ink! px-[22px] py-[15px] rounded-2xl font-bold text-[15px] inline-flex items-center gap-2.5"
               >
-                <svg
-                  width="24"
-                  height="28"
-                  viewBox="0 0 24 28"
-                  fill="var(--color-ink)"
-                >
-                  <path d="M19.4 14.5c0-3.2 2.6-4.7 2.7-4.8-1.5-2.2-3.8-2.5-4.6-2.5-2-.2-3.8 1.1-4.8 1.1s-2.5-1.1-4.1-1c-2.1 0-4 1.2-5.1 3.1-2.2 3.8-.6 9.3 1.6 12.4 1.1 1.5 2.3 3.1 4 3 1.6-.1 2.2-1 4.1-1s2.5 1 4.2 1c1.7 0 2.8-1.5 3.9-3 1.2-1.7 1.7-3.4 1.7-3.5-.1 0-3.3-1.3-3.3-5z M16.4 5c.9-1.1 1.5-2.6 1.3-4-1.3.1-2.8.9-3.7 2-.8 1-1.6 2.5-1.4 4 1.4.1 2.9-.7 3.8-2z" />
-                </svg>
-                <div>
-                  <div className="text-[10px] opacity-70">Baixar na</div>
-                  <div className="text-sm font-extrabold">App Store</div>
-                </div>
-              </motion.a>
-              <motion.a
-                href="#"
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="no-underline bg-white text-ink! px-5 py-3 rounded-xl inline-flex items-center gap-3"
-              >
-                <svg width="22" height="24" viewBox="0 0 22 24">
-                  <path
-                    d="M2 1l11 11L2 23M2 1c-.5.3-1 .8-1 1.4v19.2c0 .6.5 1.1 1 1.4M2 1l16 9.5L13 12M2 23l16-9.5L13 12"
-                    fill="none"
-                    stroke="var(--color-ink)"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <div>
-                  <div className="text-[10px] opacity-70">Disponível em</div>
-                  <div className="text-sm font-extrabold">Google Play</div>
-                </div>
+                Responder formulário
+                <ArrowRightIcon color="var(--color-ink)" size={16} />
               </motion.a>
             </div>
+            <p className="text-[13px] text-white/70 mt-4 leading-[1.5]">
+              Leva menos de 2 minutos. Sem cadastro, sem compromisso.
+            </p>
           </div>
         </motion.div>
       </div>
