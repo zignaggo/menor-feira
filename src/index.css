@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg: #efece4;
+  --color-ink: #14110d;
+  --color-ink2: #8a877f;
+  --color-ink3: #b5b1a6;
+  --color-rule: #e6e2d4;
+  --color-surface: #ffffff;
+  --color-surface2: #ede9dc;
+  --color-blue: #1e7cf0;
+  --color-blue-dark: #0e63ce;
+  --color-blue-bg: #eaf3ff;
+  --color-green: #2a9d40;
+  --color-red: #d35a4c;
+
+  --font-sans: "Switzer", "Atkinson Hyperlegible", system-ui, -apple-system,
+    "SF Pro Display", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
