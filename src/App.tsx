@@ -1,3 +1,4 @@
+import { LPDisclaimer } from "@/components/sections/disclaimer";
 import { LPNav } from "@/components/sections/nav";
 import { LPHero } from "@/components/sections/hero";
 import { LPProblem } from "@/components/sections/problem";
@@ -10,6 +11,7 @@ import { LPCTA, LPFooter } from "@/components/sections/cta";
 export default function App() {
   return (
     <>
+      <LPDisclaimer />
       <LPNav />
       <LPHero />
       <LPProblem />

@@ -1,73 +1,39 @@
-# React + TypeScript + Vite
+# Menor Feira
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Toda feira por menos.**
 
-Currently, two official plugins are available:
+O Menor Feira é um app que compara o total da sua lista de compras entre as
+filiais das principais redes de supermercado parceiras — e te diz onde sua
+feira sai mais barata, sem você precisar perguntar preço.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## O problema
 
-## React Compiler
+Os mesmos produtos têm preços diferentes em cada unidade de uma mesma rede, e
+os mercados não publicam suas tabelas online. Hoje, descobrir onde a feira
+sai mais barata exige ligar para cada loja, percorrer corredores ou só
+descobrir no caixa — feira vira projeto.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Como funciona
 
-## Expanding the ESLint configuration
+1. **Monte sua lista.** Adicione tudo que você precisa — arroz, leite, banana,
+   café. Salve listas que você refaz toda semana.
+2. **Toque em comparar.** O Menor Feira calcula o total da sua lista em todas
+   as redes parceiras ao mesmo tempo.
+3. **Vá pra mais barata.** Veja o total por filial, a economia versus a mais
+   cara, e até quais itens estão em falta.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Economia média de **R$ 25** por feira. Comparação completa entre **4 unidades
+em menos de 30 segundos.**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Privacidade
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Mostramos só o **total**. Os preços individuais ficam com o mercado.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O Menor Feira tem acordo com cada rede parceira para somar sua lista
+internamente e devolver apenas o subtotal por filial. Você ganha a comparação;
+o mercado preserva sua estratégia de precificação.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Redes parceiras
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Já em 6 redes no Nordeste, somando mais de 100 filiais: Mix Matheus, GBarbosa,
+Extra, Atacadão, Bompreço e Hiper Bom — com novas parcerias entrando todo mês.
